@@ -1,6 +1,7 @@
 package org.app;
 
 import org.app.firstSubtask.FirstSubtask;
+import org.app.secondSubtask.SecondSubtask;
 
 public class App {
 
@@ -19,19 +20,18 @@ public class App {
             switch (navigationVar) {
                 case 1: {
                     FirstSubtask firstSubtask = new FirstSubtask();
-
-                    String input = MyInput.inputString("Input the address:", v -> v);
-
+                    String input = MyInput.inputString("Input a string:", v -> v);
                     if (firstSubtask.isString(input)) {
                         System.out.println("Entered sequence is a string");
                     } else {
                         System.out.println("Entered sequence is not a string");
                     }
-
                     break;
                 }
                 case 2: {
-
+                    SecondSubtask secondSubtask = new SecondSubtask();
+                    String input = MyInput.inputString("Input prices:", v -> v);
+                    secondSubtask.getValues(input);
                     break;
                 }
                 case 3: {

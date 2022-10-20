@@ -11,7 +11,9 @@ public class MyInput {
         while (true) { // Чтобы не ругался на возможное отсутствие return'a
             try {
                 System.out.println(message);
-                return converter.apply(scanner.nextInt());
+                T temp = converter.apply(scanner.nextInt());
+                scanner.nextLine(); // Removing \n
+                return temp;
             }
             catch (Exception ex) {
                 System.err.println("Incorrect input format.");
@@ -24,7 +26,7 @@ public class MyInput {
         while (true) { // Чтобы не ругался на возможное отсутствие return'a
             try {
                 System.out.println(message);
-                return converter.apply(scanner.next());
+                return converter.apply(scanner.nextLine());
             } catch (Exception ex) {
                 System.err.println("Incorrect input format.");
                 System.exit(1);
