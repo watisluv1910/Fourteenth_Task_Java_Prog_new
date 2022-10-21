@@ -4,6 +4,7 @@ import org.app.fifthSubtask.FifthSubtask;
 import org.app.firstSubtask.FirstSubtask;
 import org.app.fourthSubtask.FourthSubtask;
 import org.app.secondSubtask.SecondSubtask;
+import org.app.seventhSubtask.SeventhSubtask;
 import org.app.sixthSubtask.SixthSubtask;
 import org.app.thirdSubtask.ThirdSubtask;
 
@@ -70,6 +71,10 @@ public class App {
                     } else {
                         System.out.println("Entered password is incorrect");
                     }
+                    break;
+                }
+                case 7: {
+                    SeventhSubtask seventhSubtask = new SeventhSubtask();
                     break;
                 }
                 default:
