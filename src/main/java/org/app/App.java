@@ -1,5 +1,6 @@
 package org.app;
 
+import org.app.eighthSubtask.EighthSubtask;
 import org.app.fifthSubtask.FifthSubtask;
 import org.app.firstSubtask.FirstSubtask;
 import org.app.fourthSubtask.FourthSubtask;
@@ -75,6 +76,12 @@ public class App {
                 }
                 case 7: {
                     SeventhSubtask seventhSubtask = new SeventhSubtask();
+                    break;
+                }
+                case 8: {
+                    EighthSubtask eighthSubtask = new EighthSubtask();
+                    String input = MyInput.inputString("Input some text:", v -> v);
+                    eighthSubtask.buildDictionary(input);
                     break;
                 }
                 default:
