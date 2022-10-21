@@ -1,5 +1,6 @@
 package org.app;
 
+import org.app.fifthSubtask.FifthSubtask;
 import org.app.firstSubtask.FirstSubtask;
 import org.app.fourthSubtask.FourthSubtask;
 import org.app.secondSubtask.SecondSubtask;
@@ -14,9 +15,7 @@ public class App {
             Integer navigationVar = MyInput.inputInteger("""
                     Navigation menu:
                     Enter 1 to run first subtask.
-                    Enter 2 to run second subtask.
-                    Enter 3 to run third subtask.
-                    Enter 4 to run fifth subtask;
+                    Enter 2 to run second subtask and etc. up to 8.
                     Enter any other digit to stop the program.""", Integer::valueOf);
 
             switch (navigationVar) {
@@ -53,7 +52,13 @@ public class App {
                     break;
                 }
                 case 5: {
-
+                    FifthSubtask fifthSubtask = new FifthSubtask();
+                    String input = MyInput.inputString("Input e-mail:", v -> v);
+                    if (fifthSubtask.isCorrect(input)) {
+                        System.out.println("Entered e-mail is correct");
+                    } else {
+                        System.out.println("Entered e-mail is incorrect");
+                    }
                     break;
                 }
                 default:
