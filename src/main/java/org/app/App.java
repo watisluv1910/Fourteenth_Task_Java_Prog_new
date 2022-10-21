@@ -4,6 +4,7 @@ import org.app.fifthSubtask.FifthSubtask;
 import org.app.firstSubtask.FirstSubtask;
 import org.app.fourthSubtask.FourthSubtask;
 import org.app.secondSubtask.SecondSubtask;
+import org.app.sixthSubtask.SixthSubtask;
 import org.app.thirdSubtask.ThirdSubtask;
 
 public class App {
@@ -58,6 +59,16 @@ public class App {
                         System.out.println("Entered e-mail is correct");
                     } else {
                         System.out.println("Entered e-mail is incorrect");
+                    }
+                    break;
+                }
+                case 6: {
+                    SixthSubtask sixthSubtask = new SixthSubtask();
+                    String input = MyInput.inputString("Input password:", v -> v);
+                    if (sixthSubtask.isCorrect(input)) {
+                        System.out.println("Entered password is correct");
+                    } else {
+                        System.out.println("Entered password is incorrect");
                     }
                     break;
                 }
