@@ -2,6 +2,7 @@ package org.app;
 
 import org.app.firstSubtask.FirstSubtask;
 import org.app.secondSubtask.SecondSubtask;
+import org.app.thirdSubtask.ThirdSubtask;
 
 public class App {
 
@@ -35,7 +36,9 @@ public class App {
                     break;
                 }
                 case 3: {
-
+                    ThirdSubtask thirdSubtask = new ThirdSubtask();
+                    String input = MyInput.inputString("Input expression:", v -> v);
+                    thirdSubtask.find(input);
                     break;
                 }
                 case 4: {
