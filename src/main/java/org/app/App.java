@@ -1,6 +1,7 @@
 package org.app;
 
 import org.app.firstSubtask.FirstSubtask;
+import org.app.fourthSubtask.FourthSubtask;
 import org.app.secondSubtask.SecondSubtask;
 import org.app.thirdSubtask.ThirdSubtask;
 
@@ -42,6 +43,16 @@ public class App {
                     break;
                 }
                 case 4: {
+                    FourthSubtask fourthSubtask = new FourthSubtask();
+                    String input = MyInput.inputString("Input date:", v -> v);
+                    if (fourthSubtask.isCorrect(input)) {
+                        System.out.println("Entered date is correct");
+                    } else {
+                        System.out.println("Entered date is incorrect");
+                    }
+                    break;
+                }
+                case 5: {
 
                     break;
                 }
